@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.google.common.io.Files;
+
 
 public class FirstTest {
 
@@ -45,8 +45,11 @@ public class FirstTest {
 			
 		File file =	Logo.getScreenshotAs(OutputType.FILE);
 		
+		File destination_of_screenshotFile = new File("./Screenshots/Logo.png");
 	
-		FileUtils.copyFile(file, new File("Logo.png"));
+		//FileUtils.copyFile(file, new File("Logo.png"));
+		
+		FileUtils.copyFile(file, destination_of_screenshotFile);
 			
 			System.out.println("The Logo is displayed");
 			Thread.sleep(5000);

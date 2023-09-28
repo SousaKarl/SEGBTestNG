@@ -60,10 +60,12 @@ public class GlobalNavigation {
 				
 			}
 			
+			//Taking Screen Shots 
 			WebElement navigation = driver.findElement(By.xpath("//nav[@class='segb-flexinav__global-nav segb-flexinav__global-nav--desktop']"));
 			File file =	navigation.getScreenshotAs(OutputType.FILE);
+			File destination_of_screenshotFile = new File("./Screenshots/Global_Navigation.png");
 			
-			FileUtils.copyFile(file, new File("Global_Navigation.png"));
+			FileUtils.copyFile(file, destination_of_screenshotFile);
 			
 			
 			
